@@ -1,0 +1,8 @@
+<h2>Página de Perfil</h2>
+
+<p><a href="{% url 'logout' %}">Sair</a></p>
+<p>Olá {{ user.username }}</p>
+
+<!--Criar um banco de dados para depois dar esse comando no terminal:
+python manage.py migrate
+python manage.py createsuperuser-->

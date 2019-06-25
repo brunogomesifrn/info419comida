@@ -1,0 +1,10 @@
+<h2>Página de Login</h2>
+<form method="post">
+	{% csrf_token %}
+	{{ form }}
+
+	<p>{{ form.username.label_tag }} Usuário: {{ form.username }}</p>
+	<p>{{ form.password.label_tag }} Senha: {{ form.password }}</p>
+
+	<button type="submit">Login</button>
+</form>
