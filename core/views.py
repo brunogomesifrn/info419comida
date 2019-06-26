@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-
+from .models import receita
 
 @login_required
 def perfil(request):
@@ -26,6 +26,13 @@ def dados(request, id):
 		return redirect('perfil')
 	contexto = {
 		'form': form
+	}
+	return render(request, 'registro.html', contexto)
+
+def receita(request):
+	receita = recita.objects.all()
+	contexto = {
+		'lista_receitas': receita
 	}
 	return render(request, 'registro.html', contexto)
 # Create your views here.
