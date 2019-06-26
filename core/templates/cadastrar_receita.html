@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load widget_tweaks %}
+	{% block conteudo %}
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+
+<p>{{form.titulo.label}}: {{form.titulo}} </p>
+<p>{{form.tipo.ingredientes}}: {{form.ingredientes}} </p>
+<p>{{form.tipo.preparo}}: {{form.preparo}} </p>
+<!--<p><img src="/media/{{curso.foto}}" alt="" width="100px"
+height="100px"/> </p>-->
+<p>{{form.tipo.label}}: {{form.tipo}} </p>
+
+
+<button type="submit" class="btn btn-primary" id="sendMessageButton">Salvar</button>
+</form>
+
+	{% endblock %}
