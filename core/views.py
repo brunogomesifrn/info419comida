@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.decorators import login_required
 from .models import receita
 
 @login_required
@@ -25,7 +25,7 @@ def dados(request, id):
 		form.save()
 		return redirect('perfil')
 	contexto = {
-		'form': form
+	'form': form
 	}
 	return render(request, 'registro.html', contexto)
 

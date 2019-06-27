@@ -12,6 +12,11 @@
 	<p>{{ form.password.label_tag }} Senha: {{ form.password }}</p>
 
 	<button type="submit">Login</button>
+	
+	{% if user.is_authenticated %}
+	<p><a href="{% url 'perfil' %}">Perfil</a></p>
+	{% endif %}
+
 </form>
 
 {% endblock %}
