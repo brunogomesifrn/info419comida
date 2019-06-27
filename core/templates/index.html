@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 
 <head>
@@ -9,9 +10,9 @@
   <meta name="keywords" content="free website templates, free bootstrap themes, free template, free bootstrap, free website template">
 
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Satisfy|Bree+Serif|Candal|PT+Sans">
-  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
   <!-- =======================================================
     Theme Name: Delicious
     Theme URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
@@ -29,7 +30,7 @@
           <div id="mySidenav" class="sidenav">
             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
             <a href="#about">Receitas</a>
-            <a href="#event">Receita do dia </a>
+            <a href="#event">login </a>
 
             <!-- link pra pagina de registro que ta referente a cadastro-->
             <a href="{% url 'registro' %}">Cadastro</a>
@@ -296,11 +297,11 @@
   </footer>
   <!-- / footer -->
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/custom.js"></script>
-  <script src="contactform/contactform.js"></script>
+  <script src="{% static 'js/jquery.min.js' %}"></script>
+  <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'js/custom.js' %}"></script>
+  <script src="{% static 'contactform/contactform.js' %}"></script>
 
 </body>
 
