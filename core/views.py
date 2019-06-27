@@ -29,12 +29,12 @@ def dados(request, id):
 	}
 	return render(request, 'registro.html', contexto)
 
-def receita(request):
-	receita = recita.objects.all()
+def receitax(request):
+	receitas = receita.objects.all()
 	contexto = {
-		'lista_receitas': receita
+		'lista_receitas': receitas
 	}
-	return render(request, 'registro.html', contexto)
+	return render(request, 'receita.html', contexto)
 
 def tipo(request):
 	return render(request, 'tipo.html')
