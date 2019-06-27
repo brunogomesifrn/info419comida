@@ -16,13 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from core.views import index, perfil, registro, dados, tipo
+from core.views import registro, dados, tipo, index
 
 urlpatterns = [
     #Parei na parte de registro do slide 9
-    path('tipo/', tipo, nama='tipo'),   
+    path('', index, name='index'),    
+    path('tipo/', tipo, name='tipo'),   
     path('dados/<int:id>/', dados, name='dados'),
-    path('registro/', registro, nama='registro'),
+    path('registro/', registro, name='registro'),
 	path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 	path('login/', auth_views.LoginView.as_view(), name='login'),
     path('admin/', admin.site.urls),

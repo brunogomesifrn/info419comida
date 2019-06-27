@@ -9,7 +9,7 @@ def perfil(request):
 
 def registro(request):
 	form = UserCreationForm(request.POST or None)
-	is form.is_valid():
+	if form.is_valid():
 		form.save()
 		return redirect('login')
 	contexto = {
@@ -35,4 +35,9 @@ def receita(request):
 		'lista_receitas': receita
 	}
 	return render(request, 'registro.html', contexto)
-# Create your views here.
+
+def tipo(request):
+	return render(request, 'tipo.html')
+
+def index(request):
+	return render(request, 'index.html')
