@@ -19,3 +19,8 @@ body {background-color:#F7BE81}
 </a>
 
 <p>Lista de de tipos de receitas:</p>
+{% for Tipo in lista_tipox %}
+<p>{{Tipo.tipox}}</p>
+{% empty %}
+<p>Nenhuma tipo cadastrado</p>
+{% endfor %}

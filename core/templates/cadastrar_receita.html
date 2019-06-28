@@ -6,12 +6,12 @@
     {% csrf_token %}
 
 <p>{{form.titulo.label}}: {{form.titulo}} </p>
-<p>{{form.tipo.ingredientes}}: {{form.ingredientes}} </p>
-<p>{{form.tipo.preparo}}: {{form.preparo}} </p>
+<p>{{form.ingrediente.label}}: {{form.ingredientes}} </p>
+<p>{{form.preparo.label}}: {{form.preparo}} </p>
 <!--<p><img src="/media/{{curso.foto}}" alt="" width="100px"
 height="100px"/> </p>-->
-<p>{{form.tipo.label}}: {{form.tipo}} </p>
-<p>{{form.imagem.label}}: {{form.imagem|add_class:"campo"}}</p>
+<p>{{form.tipox.label}}: {{form.tipox}} </p>
+<p>{{form.imagem.label}}: {{form.imagem}}</p>
 
 <button type="submit" class="btn btn-primary" id="sendMessageButton">Salvar</button>
 </form>

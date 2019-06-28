@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from .models import receita, tipo
+from .models import receita, Tipo
 from .forms import receitaForm
 
 @login_required
@@ -37,8 +37,12 @@ def receitax(request):
 	}
 	return render(request, 'receita.html', contexto)
 
-def tipo(request):
-	return render(request, 'tipo.html')
+def tipox(request):
+	tipu = Tipo.objects.all()
+	contexto = {
+		'lista_tipu': tipu
+	}
+	return render(request, 'tipo.html', contexto)
 
 def cadastrar_tipo(request):
 	return render(request, 'cadastrar_tipo.html')
