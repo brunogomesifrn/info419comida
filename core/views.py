@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .models import receita
+from .forms import receitaForm
 
 @login_required
 def perfil(request):
@@ -39,8 +40,23 @@ def receitax(request):
 def tipo(request):
 	return render(request, 'tipo.html')
 
+def cadastrar_tipo(request):
+	return render(request, 'cadastrar_tipo.html')
+
 def index(request):
 	return render(request, 'index.html')
+
+def cadastrar_receita(request):
+	form = receitaForm(request.POST or None, request.FILES or None)
+	if form.is_valid():
+		form.save()
+		return redirect('receita')
+	form = receitaForm()
+	contexto = {
+		'form' : form
+	}
+	return render(request, 'cadastrar_receita.html', contexto)
+
 
 
 
