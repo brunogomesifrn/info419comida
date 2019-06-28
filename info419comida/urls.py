@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from core.views import registro, dados, tipo, index, dados, receitax, cadastrar_receita, cadastrar_tipo, perfil 
+from core.views import registro, dados, tipo, index, receitax, cadastrar_receita, cadastrar_tipo, perfil 
 
 urlpatterns = [
     
@@ -26,8 +26,7 @@ urlpatterns = [
     path('receita/', receitax, name='receita'),
     path('dados/<int:id>/', dados, name='dados'),
     path('', index, name='index'),    
-    path('tipo/', tipo, name='tipo'),   
-    path('dados/<int:id>/', dados, name='dados'),
+    path('tipo/', tipo, name='tipo'),
     path('registro/', registro, name='registro'),
 	path('logout/', auth_views.LogoutView.as_view(), name='logout'),
 	path('login/', auth_views.LoginView.as_view(), name='login'),
