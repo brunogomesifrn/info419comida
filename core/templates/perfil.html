@@ -1,12 +1,24 @@
+{% extends 'index.html' %}
+
+{% block perfil %}
+
+
 <h2>Página de Perfil</h2>
+
+<form method="post">
+	{% csrf_token %}
 
 <p>Olá {{ user.username }}</p>
 <p><a href="{% url 'dados' user.id %}">Dados Pessoais</a></p>
 <p><a href="{% url 'receita' %}">Receita</a></p>
 <p><a href="{% url 'logout' %}">Sair</a></p>
 
+<button type="submit">Perfil</button>
+
+</form>
 
 
+{% endblock %}
 <!--Criar um banco de dados para depois dar esse comando no terminal:
 python manage.py migrate
 python manage.py createsuperuser-->
