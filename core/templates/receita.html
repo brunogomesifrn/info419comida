@@ -1,13 +1,13 @@
 <h1>Receitas</h1>
+<h1>Cadastrar mais receitas</h1>
+<a href="{% url 'receita' %}">
+<button type="button">Cadastrar</button>
+</a>
 
 <p>Lista de Receitas:</p>
 {% for receita in lista_receitas %}
-<p>{{receita.nome}}</p>
+<p>{{receitax.receita}}</p>
 {% empty %}
 <p>Nenhuma receita cadastrada</p>
 {% endfor %}
 
-<h1>Cadastrar mais receitas</h1>
-<a href="{% url 'receita_cadastrar' %}">
-<button type="button">Cadastrar</button>
-</a>

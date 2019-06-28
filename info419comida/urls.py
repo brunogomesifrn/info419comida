@@ -16,10 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from core.views import registro, dados, tipo, index, dados, receitax
+from core.views import registro, dados, tipo, index, dados, receitax, cadastrar_receita, cadastrar_tipo
 
 urlpatterns = [
     #Parei na parte de registro do slide 9
+    path('cadastrar_tipo/', cadastrar_tipo, name='cadastrar_tipo'), 
+    path('cadastrar_receita/', cadastrar_receita, name='cadastrar_receita'),   
     path('receita/', receitax, name='receita'),
     path('dados/<int:id>/', dados, name='dados'),
     path('', index, name='index'),    

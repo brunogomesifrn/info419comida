@@ -2,6 +2,6 @@ from django.forms import ModelForm
 from .models import receita
 
 class receitaForm(ModelForm):
-	class Meta():
-		models = receita.objectos
-		fields = ['']#parei aqui
+	class Meta:
+		model = receita
+		fields = ['titulo', 'ingrediente', 'preparo', 'imagem' ]#parei aqui
