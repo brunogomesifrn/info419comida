@@ -4,7 +4,7 @@
 <h1>Cadastre um tipo de receita</h1>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-
+    {{form}}
 <p>{{form.tipox.label}}: {{form.tipox}} </p>
 
 

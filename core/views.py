@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from .models import receita, Tipo
-from .forms import receitaForm
+from .forms import receitaForm, TipoForm
 
 @login_required
 def perfil(request):
@@ -45,7 +45,14 @@ def tipox(request):
 	return render(request, 'tipo.html', contexto)
 
 def cadastrar_tipo(request):
-	return render(request, 'cadastrar_tipo.html')
+	form = TipoForm(request.POST or None)
+	if form.is_valid():
+		form.save()
+		return redirect('tipo')
+	contexto = {
+		'form': form
+	}
+	return render(request, 'cadastrar_tipo.html', contexto)
 
 def index(request):
 	return render(request, 'index.html')

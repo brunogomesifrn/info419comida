@@ -8,7 +8,7 @@ class receita(models.Model):
 	ingrediente = models.TextField('Ingredientes')
 	preparo = models.TextField('Modo de preparo')
 	imagem = models.ImageField('Imagem', upload_to='imagem', null=True)
-	tipox = models.ForeignKey('tipo', on_delete=models.PROTECT)
+	tipox = models.ForeignKey('Tipo', on_delete=models.PROTECT)
 
 	
 # Create your models here.

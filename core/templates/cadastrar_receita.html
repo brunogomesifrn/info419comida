@@ -10,7 +10,9 @@
 <p>{{form.preparo.label}}: {{form.preparo}} </p>
 <!--<p><img src="/media/{{curso.foto}}" alt="" width="100px"
 height="100px"/> </p>-->
-<p>{{form.tipox.label}}: {{form.tipox}} </p>
+<p>Tipo: {{form.tipox}} <a href="{% url 'cadastrar_tipo' %}">
+<button type="button">Cadastrar Tipo</button></p>
+
 <p>{{form.imagem.label}}: {{form.imagem}}</p>
 
 <button type="submit" class="btn btn-primary" id="sendMessageButton">Salvar</button>
