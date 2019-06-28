@@ -51,7 +51,7 @@ def cadastrar_receita(request):
 	if form.is_valid():
 		form.save()
 		return redirect('receita')
-	form = receitaForm()
+
 	contexto = {
 		'form' : form
 	}
