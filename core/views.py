@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
-from .models import receita
+from .models import receita, tipo
 from .forms import receitaForm
 
 @login_required
