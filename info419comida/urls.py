@@ -18,11 +18,10 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
 from django.contrib.auth import views as auth_views
-from core.views import registro, dados, tipox, index, receitax, cadastrar_receita, cadastrar_tipo, perfil 
+from core.views import registro, dados, tipox, index, receitax, cadastrar_receita, cadastrar_tipo 
 
 urlpatterns = [
     
-    path('perfil/', perfil, name='perfil'),
     path('cadastrar_tipo/', cadastrar_tipo, name='cadastrar_tipo'), 
     path('cadastrar_receita/', cadastrar_receita, name='cadastrar_receita'),
     path('receita/', receitax, name='receita'),

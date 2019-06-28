@@ -4,10 +4,6 @@ from django.contrib.auth.decorators import login_required
 from .models import receita, Tipo
 from .forms import receitaForm, TipoForm
 
-@login_required
-def perfil(request):
-	return render(request, 'perfil.html')
-
 def registro(request):
 	form = UserCreationForm(request.POST or None)
 	if form.is_valid():
