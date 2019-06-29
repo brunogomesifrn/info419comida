@@ -3,16 +3,19 @@
 	<style type="text/css">
 
 p {
-	text-align: center;
+	
 	color: #585858;
 	font-family: italic;
-	font-size:30px
+	font-size:20px
 	
 	}
 body {background-color:#F7BE81}
 
 </style>
 </head>
+
+
+
 <h1>Receitas</h1>
 <h1>Cadastrar mais receitas</h1>
 <a href="{% url 'cadastrar_receita' %}">
@@ -20,10 +23,14 @@ body {background-color:#F7BE81}
 </a>
 
 <p>Lista de Receitas:</p>
-{% for receita in lista_receitax %}
-<p><img src="/media/{{imagem.imagem}}" alt="" width="100px"
+{% for receita in lista_receitas %}
+<p><img src="/media/{{receita.imagem}}" alt="" width="100px"
 height="100px"/></p>
-<p>{{receitax.receita}}</p>
+
+<p>{{receita.titulo}}</p>
+<p>{{receita.ingrediente}}</p>
+<p>{{receita.preparo}}</p>
+<p>{{receita.tipox}}</p>
 {% empty %}
 <p>Nenhuma receita cadastrada</p>
 {% endfor %}

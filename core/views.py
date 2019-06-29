@@ -50,7 +50,7 @@ def cadastrar_tipo(request):
 	form = TipoForm(request.POST or None)
 	if form.is_valid():
 		form.save()
-		return redirect('tipo')
+		return redirect('/tipo')
 	contexto = {
 		'form': form
 	}
